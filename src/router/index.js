@@ -1,14 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import RenderRouterView from '../components/RenderRouterView'
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/user",
-    component:RenderRouterView,
+    component:{render:h=>h("router-view")},
     children: [
       {
         path: "/user/login",
