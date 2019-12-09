@@ -1,5 +1,5 @@
 <template>
-<div>Footer</div>
+<div>Ant Design Vue ©2019 Created by Ant UED</div>
 </template>
 <script>
   export default {};
