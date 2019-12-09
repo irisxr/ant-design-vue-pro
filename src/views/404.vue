@@ -1,6 +1,6 @@
 <template>
-    <div class="home">
-
+    <div>
+        404
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 
 
   export default {
-    name: "home",
+    name: "404",
     components: {}
   };
 </script>
