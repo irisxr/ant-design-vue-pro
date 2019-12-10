@@ -47,10 +47,14 @@
   };
 </script>
 
-<style>
+<style scoped>
 .trigger{
     padding: 0 20px;
     line-height: 64px;
     font-size: 20px;
 }
+    .trigger:hover{
+        width: 60px;
+        background-color: #eeeeee;
+    }
 </style>
