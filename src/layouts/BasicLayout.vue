@@ -2,8 +2,8 @@
     <div>
         <a-layout id="components-layout-demo-side" style="min-height: 100vh">
             <a-layout-sider :trigger="null"
-                    collapsible
-                    v-model="collapsed"
+                            collapsible
+                            v-model="collapsed"
             >
                 <div class="logo"/>
                 <sider-meau/>
@@ -24,36 +24,38 @@
                 </a-layout-footer>
             </a-layout>
         </a-layout>
-
-
+        <settingDrawer/>
     </div>
 </template>
 <script>
   import Header from "./Header.vue";
   import Footer from "./Footer.vue";
   import SiderMeau from "./SiderMeau.vue";
+  import settingDrawer from "../components/settingDrawer/settingDrawer";
 
   export default {
     data() {
       return {
-        collapsed: false,
-      }
+        collapsed: false
+      };
     },
     components: {
       Header,
       Footer,
-      SiderMeau
+      SiderMeau,
+      settingDrawer
     }
   };
 </script>
 
 <style scoped>
-.trigger{
-    padding: 0 20px;
-    line-height: 64px;
-    font-size: 20px;
-}
-    .trigger:hover{
+    .trigger {
+        padding: 0 20px;
+        line-height: 64px;
+        font-size: 20px;
+    }
+
+    .trigger:hover {
         width: 60px;
         background-color: #eeeeee;
     }
