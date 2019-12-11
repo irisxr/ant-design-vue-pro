@@ -1,15 +1,16 @@
-<template>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
     <div>
-        <a-button type="primary" @click="showDrawer">
-            Open
-        </a-button>
         <a-drawer
-                title="Basic Drawer"
                 placement="right"
                 :closable="false"
                 @close="onClose"
                 :visible="visible"
         >
+            <template v-slot:handle>
+                <div class="handle" @click="visible = !visible">
+                    <a-icon :type="visible?'close':'setting'"></a-icon>
+                </div>
+            </template>
             <p>Some contents...</p>
             <p>Some contents...</p>
             <p>Some contents...</p>
@@ -20,16 +21,28 @@
   export default {
     data() {
       return {
-        visible: false,
-      }
+        visible: false
+      };
     },
     methods: {
-      showDrawer() {
-        this.visible = true
-      },
       onClose() {
-        this.visible = false
-      },
-    },
-  }
+        this.visible = false;
+      }
+    }
+  };
 </script>
+<style>
+    .handle{
+        position: absolute;
+        top:240px;
+        right: 256px;
+        height: 48px;
+        width: 48px;
+        text-align: center;
+        line-height:48px;
+        font-size: 20px;
+        background: #eeaafe;
+        color: #fff;
+        border-radius: 3px 0 0 3px;
+    }
+</style>
